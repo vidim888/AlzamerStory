@@ -17,7 +17,7 @@ with (par_enemy) {
 
 for (i = 0; i < 31; i += 1) {
 	var i_x;
-	i_x = 32 + 32 * i
+	i_x = 32 * i
 	
 	if (mp_grid_path(global.map_grid, global.navigate, global.ai_selected.x, global.ai_selected.y, i_x, row, 1)) {
 		if (path_get_length(global.navigate) <= global.ai_selected.remaining_movement) {
