@@ -11,8 +11,8 @@ acquired_targets = false;
 
 pace = 4;
 
-remaining_movement = 80;
-moving_speed = remaining_movement;
+moving_speed = 80;
+remaining_movement = moving_speed;
 
 idle_anim = spr_archerIdle;
 run_anim = spr_archerRun;

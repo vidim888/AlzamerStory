@@ -5,8 +5,8 @@ attacked = false;
 attack = 50;
 hp = 100;
 
-remaining_movement = 100;
-moving_speed = remaining_movement;
+moving_speed = 100;
+remaining_movement = moving_speed;
 pace = 5;
 
 idle_anim = spr_spearmanIdle;

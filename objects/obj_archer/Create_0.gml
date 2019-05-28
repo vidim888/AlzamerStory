@@ -5,8 +5,8 @@ attacked = false;
 attack = 30;
 hp = 60;
 
-remaining_movement = 80;
-moving_speed = remaining_movement;
+moving_speed = 80;
+remaining_movement = moving_speed;
 pace = 4;
 
 idle_anim = spr_archerIdle

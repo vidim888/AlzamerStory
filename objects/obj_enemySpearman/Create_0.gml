@@ -11,8 +11,8 @@ acquired_targets = false;
 
 pace = 4;
 
-remaining_movement = 80;
-moving_speed = remaining_movement;
+moving_speed = 100;
+remaining_movement = moving_speed;
 
 idle_anim = spr_spearmanIdle;
 run_anim = spr_spearmanRun;

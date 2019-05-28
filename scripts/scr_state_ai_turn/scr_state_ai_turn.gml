@@ -1,7 +1,3 @@
-if (instance_number(par_player < 1)) {
-	global.state = states.fail_state;
-}
-
 if (global.ai_selected == noone) {
 	if (global.ai_activated == false) {
 		ai_active = instance_number(par_enemy) - global.ai_id;

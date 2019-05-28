@@ -10,7 +10,7 @@ with (my_projectile) {
 	image_angle = direction;
 	move_towards_point(global.enemy.x, global.enemy.y, 15);
 	if (instance_place(x, y, global.enemy)) {
-		global.damage_dealt = irandom(global.selected.attack);
+		global.damage_dealt = irandom(global.ai_selected.attack);
 		global.enemy.hp -= global.damage_dealt;
 		instance_create_layer(global.enemy.x, global.enemy.y, layer, obj_damageDealt)
 		if (global.enemy.hp <= 0) {
