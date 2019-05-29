@@ -22,7 +22,7 @@ with (my_projectile) {
 		
 		with (obj_attackSquareAi) { instance_destroy(); }
 		global.enemy = noone;
-		attacked = true;
+		global.ai_selected.attacked = true;
 		if (instance_number(par_player) < 1) { global.state = states.fail_state; }
 		instance_destroy();
 	}

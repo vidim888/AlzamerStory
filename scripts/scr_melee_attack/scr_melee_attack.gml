@@ -18,4 +18,8 @@ if (image_index >= image_number - 1) {
 	global.attacking = false;
 	global.enemy = noone;
 	image_xscale = 1;
+	
+	with (obj_moveSquare) instance_destroy();
+	with (obj_attackSquare) instance_destroy();
+	global.selected = noone;
 }

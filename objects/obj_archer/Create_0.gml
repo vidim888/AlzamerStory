@@ -5,6 +5,8 @@ attacked = false;
 attack = 30;
 hp = 60;
 
+initiative_bonus = 19;
+
 moving_speed = 80;
 remaining_movement = moving_speed;
 pace = 4;

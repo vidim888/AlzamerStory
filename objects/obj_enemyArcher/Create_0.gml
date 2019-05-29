@@ -11,6 +11,8 @@ acquired_targets = false;
 
 pace = 4;
 
+initiative_bonus = 5;
+
 moving_speed = 80;
 remaining_movement = moving_speed;
 

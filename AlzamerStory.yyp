@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "b26ff97b-423d-4a9b-b251-6f97e3517620",
+            "Value": {
+                "id": "26c4003d-43f8-4d8a-a427-6b4db3692f08",
+                "resourcePath": "objects\\par_creature\\par_creature.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "be0869d0-0469-4468-9d0a-0c89c791239b",
             "Value": {
                 "id": "107d2887-df2b-4274-a51e-917da8611ac5",

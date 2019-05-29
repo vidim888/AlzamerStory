@@ -5,6 +5,8 @@ hp = 100;
 
 type = 1;
 
+initiative_bonus = 1;
+
 attacked = false;
 moved = false;
 acquired_targets = false;
