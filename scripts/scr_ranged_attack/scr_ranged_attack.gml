@@ -10,12 +10,20 @@ with (my_projectile) {
 	image_angle = direction;
 	move_towards_point(global.enemy.x, global.enemy.y, 15);
 	if (instance_place(x, y, global.enemy)) {
+		
+		to_hit = global.selected.weapon.base_hit + global.selected.hit_bonus - global.enemy.dodge;
+		if (irandom_range(1, 100) < to_hit) {
+			global.damage_dealt = max(irandom_range(1, global.selected.weapon.damage_die) - global.enemy.defence, 1);
+			global.enemy.hp -= global.damage_dealt;
+		} else {
+			global.damage_dealt = "MISS";
+		}
+		
 		global.damage_dealt = irandom(global.selected.attack);
 		global.enemy.hp -= global.damage_dealt;
-		instance_create_layer(global.enemy.x, global.enemy.y, layer, obj_damageDealt)
+		instance_create_layer(global.enemy.x, global.enemy.y, "Actions_Layer", obj_damageDealt)
 		if (global.enemy.hp <= 0) {
-			global.enemy.image_index = 0;
-			global.enemy.sprite_index = global.enemy.death_anim;
+			instance_deactivate_all(global.enemy);
 		}
 		global.attacking = false;
 		global.selected.image_xscale = 1;

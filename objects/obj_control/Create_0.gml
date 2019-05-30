@@ -1,6 +1,7 @@
 /// global variables.
 global.state = states.p_turn;
 global.selected = noone;
+global.active_skill = noone;
 
 global.ai_selected = noone;
 
