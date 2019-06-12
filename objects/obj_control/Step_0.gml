@@ -32,8 +32,8 @@ if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_in
 					}
 				}
 				scr_place_move_square();
-				for (i = 0; i < array_length_1d(skill_list); i++) {
-					instance_create_layer(256 + 96 * i, 672, "Actions_Layer", skill_list[i]);
+				for (each_skill = 0; each_skill < array_length_1d(skill_list); each_skill++) {
+					instance_create_layer((global.starting_width / 2 - 300) + (global.cell_size * 1.25) * each_skill, global.starting_height - 20, "Actions_Layer", skill_list[each_skill]);
 				}
 			}
 			if (global.selected != noone) {
@@ -47,7 +47,7 @@ if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_in
 				acquired_targets = false;
 				scr_place_move_square_ai();
 			}
-			if (global.moving == false && global.attacking == false && global.ai_selected != noone) {
+			if (global.ai_selected != noone) {
 				scr_state_ai_turn();
 			}
 		}

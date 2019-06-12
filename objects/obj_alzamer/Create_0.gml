@@ -5,7 +5,7 @@ DEX = 3;
 VIT = 8;
 INT = 6;
 
-hp = floor(2 * VIT * level);
+hp = floor(2 * VIT * level) + 100;
 
 defence = max(floor(VIT / 5), 0);
 dodge = floor(DEX + VIT / 3);
@@ -23,9 +23,9 @@ effects_map = ds_map_create();
 
 attacked = false;
 
-moving_speed = 200;
+moving_speed = 500;
 remaining_movement = moving_speed;
-pace = 5;
+pace = 11;
 
 idle_anim = spr_alzamer;
 run_anim = spr_alzamer;

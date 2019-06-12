@@ -11,7 +11,9 @@ if (image_index >= image_number - 1) {
 	if (irandom_range(1, 100) < to_hit) {
 		global.damage_dealt = max(irandom_range(1, weapon.damage_die) - global.enemy.defence, 1);
 		global.enemy.hp -= global.damage_dealt;
+		show_debug_message("Player hit for " + string(global.damage_dealt) + " damage.");
 	} else {
+		show_debug_message("Player missed");
 		global.damage_dealt = "MISS";
 	}
 	instance_create_layer(global.enemy.x, global.enemy.y, "Actions_Layer", obj_damageDealt);

@@ -5,14 +5,17 @@ if (sprite_index != melee_anim) {
 }
 
 if (image_index >= image_number - 1) {
+	
 	sprite_index = idle_anim;
 	
 	to_hit = weapon.base_hit + hit_bonus - global.enemy.dodge;
 	if (irandom_range(1, 100) < to_hit) {
 		global.damage_dealt = max(irandom_range(1, weapon.damage_die) - global.enemy.defence, 1);
 		global.enemy.hp -= global.damage_dealt;
+		show_debug_message("Player was damaged for " + string(global.damage_dealt));
 	} else {
 		global.damage_dealt = "MISS";
+		show_debug_message("Player dodged the attack");
 	}
 
 	instance_create_layer(global.enemy.x, global.enemy.y, "Actions_Layer", obj_damageDealt);

@@ -23,9 +23,9 @@ attacked = false;
 moved = false;
 acquired_targets = false;
 
-pace = 4;
+pace = 17;
 
-moving_speed = 200;
+moving_speed = 500;
 remaining_movement = moving_speed;
 
 idle_anim = spr_goblin;

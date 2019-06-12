@@ -5,14 +5,15 @@ if (!instance_exists(par_player)) {
 nearest_target = instance_nearest(x, y, par_player);
 nearest_move = instance_nearest(nearest_target.x, nearest_target.y, obj_moveSquareAi);
 nearest_attack = instance_nearest(x, y, obj_attackSquareAi);
-	
+
+//show_debug_message(string(nearest_target) + " " + string(nearest_move) + " " + string(nearest_attack));
+
 if (weapon.type == 1) {
-	if (moved == false) {
+	if (moved == false && nearest_move) {
 		sprite_index = run_anim;
-		scr_navigation(x, y, round(nearest_move.x / 32) * 32, round(nearest_move.y / 32) * 32, pace);
-				
-	}
-	if (path_index == -1) {
+		scr_navigation(x, y, round(nearest_move.x / global.cell_size) * global.cell_size, round(nearest_move.y / global.cell_size) * global.cell_size, pace);
+	} else {moved = true;}
+	if (path_index == -1 || moved == true) {
 		if (moved == false) {
 			sprite_index = idle_anim;
 		}
@@ -46,7 +47,7 @@ if (weapon.type == 1) {
 		scr_ranged_attack_ai();
 	} else {
 		sprite_index = run_anim;
-		scr_navigation(x, y, round(nearest_move.x/32)*32, round(nearest_move.y/32)*32, pace);
+		scr_navigation(x, y, round(nearest_move.x/global.cell_size)*global.cell_size, round(nearest_move.y/global.cell_size)*global.cell_size, pace);
 	}
 	if (path_index == -1) {
 		if (moved == false) {

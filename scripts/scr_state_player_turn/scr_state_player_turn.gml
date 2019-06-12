@@ -4,7 +4,7 @@ if (mouse_check_button_pressed(mb_left)) {
 		with (obj_moveSquare) instance_destroy();
 		with (obj_attackSquare) instance_destroy();
 		sprite_index = run_anim;
-		scr_navigation(x, y, round(mouse_x/32)*32, round(mouse_y/32)*32, pace);
+		scr_navigation(x, y, round(mouse_x/global.cell_size)*global.cell_size, round(mouse_y/global.cell_size)*global.cell_size, pace);
 		remaining_movement -= path_get_length(global.navigate);
 	} else if (instance_position(mouse_x, mouse_y, obj_attackSquare) && global.selected.attacked == false) {
 		global.enemy = instance_position(mouse_x, mouse_y, par_enemy);
@@ -15,7 +15,7 @@ if (mouse_check_button_pressed(mb_left)) {
 				global.moving = true;
 				scr_calculate_dist();
 				sprite_index = run_anim;
-				scr_navigation(x, y, round(global.attack_travel_x / 32) * 32, round(global.attack_travel_y / 32) * 32, pace);
+				scr_navigation(x, y, round(global.attack_travel_x / global.cell_size) * global.cell_size, round(global.attack_travel_y / global.cell_size) * global.cell_size, pace);
 				remaining_movement -= path_get_length(global.navigate);
 			}
 		} else if (weapon.type == 2) {

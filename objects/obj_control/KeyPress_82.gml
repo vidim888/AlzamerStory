@@ -10,10 +10,11 @@ with (par_player) {
 		}
 	}
 }
-if (instance_number(par_player) > 0 && global.selected != noone) {
+if (instance_number(par_player) > 0 && global.selected != noone && global.moving == false && global.attacking == false) {
 	global.initiative_index++;
 	global.selected = noone;
 	global.ai_selected = noone;
 	with (obj_moveSquare) instance_destroy();
 	with (obj_attackSquare) instance_destroy();
+	with (obj_skillSquare) instance_destroy();
 }
