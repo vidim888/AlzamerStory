@@ -17,10 +17,13 @@ if (ds_grid_get(global.initiative_order, 0, 0) == -10000) {
 	ds_grid_sort(global.initiative_order, 0, false);
 }
 
+show_debug_message(string(global.moving) + string(global.attacking) + string(global.selected) + " " + string(global.ai_selected))
+
 if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_index))) {
 	with (ds_grid_get(global.initiative_order, 1, global.initiative_index)) {
 		if (object_is_ancestor(object_index, par_player)) {
 			if (global.moving == false && global.attacking == false && global.selected == noone) {
+				show_debug_message("INITIALIZED PLAYER " + string(attacked) + " " + string(remaining_movement));
 				global.selected = ds_grid_get(global.initiative_order, 1, global.initiative_index);
 				if (weapon.type == 2) {
 					if (attacked == false) {
@@ -37,10 +40,12 @@ if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_in
 				}
 			}
 			if (global.selected != noone) {
+				show_debug_message("Turn: " + string(attacked) + " " + string(remaining_movement))
 				scr_state_player_turn();
 			}
 		} else if (object_is_ancestor(object_index, par_enemy)) {
 			if (global.moving == false && global.attacking == false && global.ai_selected == noone) {
+				show_debug_message("Initialized AI");
 				global.ai_selected = ds_grid_get(global.initiative_order, 1, global.initiative_index);
 				attacked = false;
 				moved = false;

@@ -17,4 +17,5 @@ if (instance_number(par_player) > 0 && global.selected != noone && global.moving
 	with (obj_moveSquare) instance_destroy();
 	with (obj_attackSquare) instance_destroy();
 	with (obj_skillSquare) instance_destroy();
+	with (par_skill) instance_destroy();
 }

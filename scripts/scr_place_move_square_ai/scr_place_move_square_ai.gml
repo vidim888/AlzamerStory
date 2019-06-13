@@ -1,10 +1,9 @@
-row = 0;
+row = 1;
 
-mp_grid_clear_rectangle(global.map_grid, 0, 0, display_get_width(), display_get_height())
+mp_grid_clear_rectangle(global.map_grid, 0, 0, global.cell_size * global.grid_width, global.cell_size * global.grid_height);
 
 with (par_player) {
 	if (self.id != global.ai_selected.id) {
-		//mp_grid_add_cell(global.map_grid, round(x/32)-2, round(y/32)-4);
 		mp_grid_add_rectangle(global.map_grid, x, y, x, y);
 	}
 }
@@ -15,7 +14,7 @@ with (par_enemy) {
 	}
 }
 
-for (column = 0; column <= global.grid_width; column++) {
+for (column = 1; column <= global.grid_width; column++) {
 	cell_x = column * global.cell_size;
 	cell_y = row * global.cell_size;
 	
@@ -29,7 +28,7 @@ for (column = 0; column <= global.grid_width; column++) {
 		row++;
 	}
 	if (row > global.grid_height) {
-		row = 0;
+		row = 1;
 		break;
 	}
 	

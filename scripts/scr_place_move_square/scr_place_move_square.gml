@@ -1,6 +1,6 @@
-row = 0;
+row = 1;
 
-mp_grid_clear_rectangle(global.map_grid, 0, 0, display_get_width(), display_get_height())
+mp_grid_clear_rectangle(global.map_grid, 0, 0, global.cell_size * global.grid_width, global.cell_size * global.grid_height);
 
 with (par_player) {
 	if (self.id != global.selected.id) {
@@ -9,15 +9,20 @@ with (par_player) {
 }
 
 with (par_enemy) {
-	mp_grid_add_rectangle(global.map_grid, x, y, x, y);
+	if (self.id != global.selected.id) {
+		mp_grid_add_rectangle(global.map_grid, x, y, x, y);
+	}
 }
 
-for (column = 0; column <= global.grid_width; column++) {
+for (column = 1; column <= global.grid_width; column++) {
+	show_debug_message(string(column) + " " + string(row));
 	cell_x = column * global.cell_size;
 	cell_y = row * global.cell_size;
 	
 	if (mp_grid_path(global.map_grid, global.navigate, global.selected.x, global.selected.y, cell_x, cell_y, 1)) {
+		show_debug_message("There is path with length of " + string(path_get_length(global.navigate)));
 		if (path_get_length(global.navigate) <= global.selected.remaining_movement) {
+			show_debug_message("Placed move square");
 			instance_create_layer(cell_x, cell_y, layer, obj_moveSquare);
 		} 
 	} 
@@ -26,7 +31,7 @@ for (column = 0; column <= global.grid_width; column++) {
 		row++;
 	}
 	if (row > global.grid_height) {
-		row = 0;
+		row = 1;
 		break;
 	}
 	
