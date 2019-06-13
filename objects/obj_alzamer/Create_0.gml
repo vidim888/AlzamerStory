@@ -17,7 +17,7 @@ hit_bonus = floor(DEX / 2 + STR / 3);
 weapon = obj_sword;
 instance_create_layer(0, 0, "Actions_Layer", weapon);
 
-skill_list = [obj_bash, obj_shieldUp];
+skill_list = [obj_shieldUp, obj_sacredFlame, obj_heal, obj_attackUp];
 
 effects_map = ds_map_create();
 

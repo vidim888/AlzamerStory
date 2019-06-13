@@ -11,7 +11,7 @@ if (mouse_check_button_pressed(mb_left)) {
 		global.attacking = true;
 		attacked = true;
 		if (weapon.type == 1) {
-			if (distance_to_object(global.enemy) > 13) {
+			if (distance_to_object(global.enemy) > weapon.range * 128) {
 				global.moving = true;
 				scr_calculate_dist();
 				sprite_index = run_anim;

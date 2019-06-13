@@ -15,14 +15,11 @@ with (par_enemy) {
 }
 
 for (column = 1; column <= global.grid_width; column++) {
-	show_debug_message(string(column) + " " + string(row));
 	cell_x = column * global.cell_size;
 	cell_y = row * global.cell_size;
 	
 	if (mp_grid_path(global.map_grid, global.navigate, global.selected.x, global.selected.y, cell_x, cell_y, 1)) {
-		show_debug_message("There is path with length of " + string(path_get_length(global.navigate)));
 		if (path_get_length(global.navigate) <= global.selected.remaining_movement) {
-			show_debug_message("Placed move square");
 			instance_create_layer(cell_x, cell_y, layer, obj_moveSquare);
 		} 
 	} 
