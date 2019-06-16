@@ -5,7 +5,7 @@
     "name": "obj_goblin",
     "eventList": [
         {
-            "id": "04b1d98f-8e1d-4f2e-9848-bb01a5bfb93e",
+            "id": "1a93a004-9c82-466a-9162-5ad96d0a093e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
