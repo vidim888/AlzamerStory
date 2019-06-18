@@ -8,9 +8,9 @@ INT = 4;
 weapon = obj_glaive;
 
 skill_list = [obj_bash];
+reactions = [obj_opportunityAttack, obj_enterOpportunityAttack];
 
 effects_map = ds_map_create();
-
 
 moving_speed = 500;
 pace = 11;

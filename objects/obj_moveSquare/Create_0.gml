@@ -1,5 +1,6 @@
 /// Create the attack squares
 range = global.selected.weapon.range;
+drawing_path = false;
 if (global.selected.attacked == false) {
 	for (x_off = -range; x_off <= range; x_off += 1) {
 		for (y_off = -range; y_off <= range; y_off += 1) {

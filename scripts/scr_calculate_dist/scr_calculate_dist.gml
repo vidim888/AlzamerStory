@@ -22,12 +22,6 @@ for (i = 0; i <= 8; i += 1) {
 	}
 }
 
-show_debug_message(string(dist_list));
-show_debug_message(string(ii));
-show_debug_message(string(floor(ii / 3) - 1));
-show_debug_message(string(ii - floor(ii / 3) * 3 - 1));
-
-
 if (ii != -1) {
 	global.attack_travel_x = square.x + (floor(ii / 3) - 1) * global.cell_size;
 	global.attack_travel_y = square.y + (ii - floor(ii / 3) * 3 - 1) * global.cell_size;

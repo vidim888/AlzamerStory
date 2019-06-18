@@ -8,6 +8,7 @@ INT = 6;
 weapon = obj_sword;
 
 skill_list = [obj_shieldUp, obj_sacredFlame, obj_heal, obj_attackUp];
+reactions = [obj_opportunityAttack];
 
 effects_map = ds_map_create();
 

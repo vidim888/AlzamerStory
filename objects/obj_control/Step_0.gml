@@ -12,12 +12,14 @@ if (ds_grid_get(global.initiative_order, 0, 0) == -10000) {
 		ds_grid_set(global.initiative_order, 1, i++, self);
 	}
 	for (i = i; i < 100; i++) {
-		ds_grid_set(global.initiative_order, 0, i, -10000);	
+		ds_grid_set(global.initiative_order, 0, i, -10000);
 	}
 	ds_grid_sort(global.initiative_order, 0, false);
 }
 
-if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_index))) {
+if (ds_grid_get(global.initiative_order, 0, global.initiative_index) == -10000) {
+	ds_grid_set(global.initiative_order, 0, 0, -10000);
+} else if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_index))) {
 	with (ds_grid_get(global.initiative_order, 1, global.initiative_index)) {
 		if (object_is_ancestor(object_index, par_player)) {
 			if (global.moving == false && global.attacking == false && global.selected == noone) {
@@ -52,8 +54,6 @@ if (instance_exists(ds_grid_get(global.initiative_order, 1, global.initiative_in
 			}
 		}
 	}
-} else if (ds_grid_get(global.initiative_order, 0, global.initiative_index) == -10000) {
-	ds_grid_set(global.initiative_order, 0, 0, -10000);
 } else {
 	global.initiative_index++;
 }

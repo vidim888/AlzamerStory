@@ -10,6 +10,9 @@ if !(mp_grid_path(global.map_grid, global.navigate, start_x, start_y, end_x, end
 }
 else {
 	mp_grid_path(global.map_grid, global.navigate, start_x, start_y, end_x, end_y, 1);
+	if (global.ai_selected != noone) {
+		
+	}
 	path_start(global.navigate, pace, 0, false);
 	return true;
 }

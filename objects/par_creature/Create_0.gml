@@ -14,3 +14,4 @@ remaining_movement = moving_speed;
 image_xscale = -1;
 
 attacked = false;
+reacted = false;

@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "32ceefef-4ed6-4323-86cd-d5d3f2bc13c7",
+            "Value": {
+                "id": "67c8b488-5f91-4c83-b501-02c7bddc9f61",
+                "resourcePath": "views\\32ceefef-4ed6-4323-86cd-d5d3f2bc13c7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3549fe28-ecdf-4602-9243-07ec7e7eceef",
             "Value": {
                 "id": "54548a0d-7c7e-4dbd-95b9-2cc928cb1f5b",
@@ -372,6 +380,14 @@
                 "id": "fe7e1c1f-a625-4ff8-9e8b-b8c78e41f178",
                 "resourcePath": "views\\69f52508-679e-4adf-83cf-c8be7e27af81.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6b8635ac-7616-43b2-bd27-fbf70c372191",
+            "Value": {
+                "id": "c662b8b3-545e-416d-9139-e346285ab37a",
+                "resourcePath": "objects\\obj_opportunityAttack\\obj_opportunityAttack.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -788,6 +804,14 @@
                 "id": "a548b3e9-370f-432a-b0a4-af67e0c343e8",
                 "resourcePath": "sprites\\spr_attackUp\\spr_attackUp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e08a458d-b419-4c79-86ed-a23544a95f01",
+            "Value": {
+                "id": "5c247355-2d3e-4002-a909-1f84dce699da",
+                "resourcePath": "objects\\obj_enterOpportunityAttack\\obj_enterOpportunityAttack.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -31,6 +31,9 @@ if (image_index >= image_number - 1) {
 	}
 	global.enemy = noone;
 	attacked = true;
-	if (instance_number(par_player) < 1) { global.state = states.fail_state; }
+	if (instance_number(par_player) < 1) { 
+		instance_destroy();
+		global.state = states.fail_state; 
+	}
 	
 }
